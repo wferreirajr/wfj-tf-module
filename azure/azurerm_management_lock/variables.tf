@@ -4,7 +4,10 @@ variable "name" {
   default     = ""
 }
 
-
+variable "scope" {
+  type        = list(string)
+  description = "The scope of the management lock. It should be a list of resource IDs."
+}
 
 variable "lock_level" {
   type        = string
