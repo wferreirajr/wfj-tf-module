@@ -5,7 +5,7 @@ variable "name" {
 }
 
 variable "scope" {
-  type        = string
+  type        = list(string)
   description = ""
   default     = ""
 }
