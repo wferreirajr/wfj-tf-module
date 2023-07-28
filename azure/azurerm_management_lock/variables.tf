@@ -1,23 +1,23 @@
 variable "name" {
   type        = string
   description = ""
-  default     = {}
+  default     = ""
 }
 
 variable "scope" {
   type        = string
   description = ""
-  default     = {}
+  default     = ""
 }
 
 variable "lock_level" {
   type        = string
   description = ""
-  default     = {}
+  default     = ""
 }
 
 variable "note" {
   type        = string
   description = ""
-  default     = {}
+  default     = ""
 }
