@@ -17,3 +17,8 @@ resource "azurerm_storage_account" "storage" {
         }
     )
 }
+
+// como gerar um id aleatorio para o storage account?
+resource "random_id" "storage_id" {
+  byte_length = 4
+}
