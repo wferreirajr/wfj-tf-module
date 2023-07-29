@@ -5,7 +5,7 @@ variable "name" {
 }
 
 variable "scope" {
-  type        = list(string)
+  type        = string
   description = "The scope of the management lock. It should be a list of resource IDs."
 }
 
