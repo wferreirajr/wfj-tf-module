@@ -2,7 +2,7 @@
 
 resource "azurerm_resource_group" "rg" {
 
-  count = var.apply_rg ? 1 : 0
+  # count = var.apply_rg ? 1 : 0
 
   for_each = { for cfg in var.resource_group_configs : cfg.name => cfg }
 
