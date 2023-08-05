@@ -8,14 +8,14 @@ resource "azurerm_storage_account" "storage" {
   account_tier             = var.account_tier
   account_replication_type = var.account_replication_type
 
-    // como fazer para que a tag seja feito merge com outras tags que o usuario queira adicionar?
+  // como fazer para que a tag seja feito merge com outras tags que o usuario queira adicionar?
 
-    tags = merge(
-        var.additional_tags,
-        {
-        manager-by = "iac"
-        }
-    )
+  tags = merge(
+    var.additional_tags,
+    {
+      manager-by = "iac"
+    }
+  )
 }
 
 // como gerar um id aleatorio para o storage account?

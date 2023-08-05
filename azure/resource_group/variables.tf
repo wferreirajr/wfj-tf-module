@@ -1,5 +1,11 @@
 # variables.tf
 
+variable "apply_rg" {
+  description = "Flag to create the Azure Resource Group"
+  type        = bool
+  default     = false
+}
+
 variable "resource_group_configs" {
   description = "List of configurations for the Resource Groups"
   type = list(object({

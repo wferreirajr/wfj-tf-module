@@ -21,5 +21,5 @@ variable "account_replication_type" {
 }
 
 variable "additional_tags" {
-  type = map
+  type = map(any)
 }
