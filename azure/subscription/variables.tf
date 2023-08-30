@@ -20,3 +20,7 @@ variable "subscription_id" {
     type = string
     description = "ID da subscription"
 }
+
+variable "additional_tags" {
+  type = map(any)
+}
