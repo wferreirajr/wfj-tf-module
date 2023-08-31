@@ -21,7 +21,6 @@ variable "subnets" {
     name           = string
     address_prefix = string
   }))
-  default = [""]
 }
 
 variable "dns_servers" {
