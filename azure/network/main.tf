@@ -5,11 +5,11 @@ resource "azurerm_virtual_network" "wfj-vnet" {
   address_space       = [var.vnet_cidr]
   location            = var.location
   resource_group_name = var.resource_group_name
-  dns_servers = var.dns_servers
+  dns_servers = var.dns_servers == "" ? null : var.dns_servers
       
   subnet {
-    name           = var.subnet_name
-    address_prefix = var.subnet_cidr
+    name           = var.subnet_name == "" ? null : var.subnet_name
+    address_prefix = var.subnet_cidr == "" ? null : var.subnet_cidr
   }
 
   tags = merge(
