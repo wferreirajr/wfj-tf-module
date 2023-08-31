@@ -10,6 +10,13 @@ resource "azurerm_policy_definition" "example" {
   mode         = "All"
   display_name = "Allowed resource types"
 
+  metadata = <<METADATA
+  {
+    "category": "wfj foundation",
+    "version": "1.0.0"
+  }
+  METADATA
+
   policy_rule = <<POLICY_RULE
  {
     "if": {
@@ -19,7 +26,7 @@ resource "azurerm_policy_definition" "example" {
       }
     },
     "then": {
-      "effect": "Deny"
+      "effect": "deny"
     }
   }
 POLICY_RULE
