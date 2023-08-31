@@ -16,19 +16,16 @@ variable "resource_group_name" {
   type = string
 }
 
-variable "subnet_name" {
-  type = string
-  default = ""
-}
-
-variable "subnet_cidr" {
-  type = string
-  default = ""
+variable "subnets" {
+  type = list(object({
+    name           = string
+    address_prefix = string
+  }))
 }
 
 variable "dns_servers" {
-  type = list(string)
-  default = [ "" ]
+  type    = list(string)
+  default = [""]
 }
 
 variable "additional_tags" {

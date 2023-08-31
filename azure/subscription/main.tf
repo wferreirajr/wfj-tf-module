@@ -1,7 +1,7 @@
 # main.tf
 
 resource "azurerm_subscription" "wfj-add-subscription" {
-  count = var.add_subscription ? 1 : 0
+  count             = var.add_subscription ? 1 : 0
   alias             = var.alias
   subscription_name = var.subscription_name
   subscription_id   = var.subscription_id
