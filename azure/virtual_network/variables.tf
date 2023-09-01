@@ -31,4 +31,3 @@ variable "dns_servers" {
 variable "additional_tags" {
   type = map(string)
 }
-
