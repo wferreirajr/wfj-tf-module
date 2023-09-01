@@ -17,7 +17,7 @@ variable "resource_group_name" {
 
 variable "security_rules" {
   description = "List of security rules"
-  type        = list(object({
+  type = list(object({
     name                       = string
     priority                   = number
     direction                  = string
