@@ -15,11 +15,6 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "subnet_id" {
-  description = "Subnet ID"
-  type        = string
-}
-
 variable "vm_size" {
   description = "Virtual Machine Size"
   type        = string

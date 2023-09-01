@@ -15,7 +15,7 @@ resource "azurerm_network_interface" "wfj-nic" {
 
   ip_configuration {
     name                          = "${var.vm_name}-nic-1-ipconfig-1"
-    subnet_id                     = var.subnet_id
+    subnet_id                     = azurerm_subnet.wfj-subnet.id
     private_ip_address_allocation = "Dynamic"
     primary                       = true
   }
@@ -33,7 +33,7 @@ resource "azurerm_virtual_machine" "wfj-vm" {
   name                  = var.vm_name
   location              = var.location
   resource_group_name   = var.resource_group_name
-  network_interface_ids = [azurerm_subnet.wfj-subnet.id]
+  network_interface_ids = [ azurerm_network_interface.wfj-nic.id ]
   vm_size               = var.vm_size
 
   storage_image_reference {
