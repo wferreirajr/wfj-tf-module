@@ -1,4 +1,15 @@
 # main.tf
+
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 2.0.0"
+    }
+  }
+}
+
+
 resource "azurerm_subscription_policy_assignment" "assignment_policy" {
 
   name                 = var.assignment_policy_name
