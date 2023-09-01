@@ -25,7 +25,7 @@ variable "subnets" {
 
 variable "dns_servers" {
   type    = list(string)
-  default = [""]
+  default = []
 }
 
 variable "additional_tags" {
