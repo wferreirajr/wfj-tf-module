@@ -13,7 +13,7 @@ resource "azurerm_network_interface" "wfj-nic" {
 
   ip_configuration {
     name                          = "${var.vm_name}-nic-1-ipconfig-1"
-    subnet_id                     = azurerm_subnet.wfj-subnet.id
+    subnet_id                     = data.azurerm_subnet.wfj-subnet.id
     private_ip_address_allocation = "Dynamic"
     primary                       = true
   }
