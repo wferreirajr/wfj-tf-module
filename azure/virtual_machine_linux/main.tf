@@ -67,8 +67,4 @@ resource "azurerm_virtual_machine" "wfj-vm" {
     }
   )
 
-  depedeny_on = [
-    azurerm_network_interface.wfj-nic
-  ]
-
 }
