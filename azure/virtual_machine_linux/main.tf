@@ -1,6 +1,6 @@
 # main.tf
 
-data "azurerm_subnet" "wfj-subnet" {
+data "azurerm_subnet" "wfj_subnet" {
   name                 = var.subnet_name
   virtual_network_name = var.vnet_name
   resource_group_name  = var.resource_group_name_vnet
@@ -13,7 +13,7 @@ resource "azurerm_network_interface" "wfj-nic" {
 
   ip_configuration {
     name                          = "${var.vm_name}-nic-1-ipconfig-1"
-    subnet_id                     = data.azurerm_subnet.wfj-subnet.id
+    subnet_id                     = data.azurerm_subnet.wfj_subnet.id
     private_ip_address_allocation = "Dynamic"
     primary                       = true
   }
