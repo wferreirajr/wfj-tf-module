@@ -11,8 +11,6 @@ resource "azurerm_network_interface" "wfj-nic" {
   location            = var.location
   resource_group_name = var.resource_group_name
 
-  virtual_machine_id = azurerm_virtual_machine.wfj-vm.id
-
   ip_configuration {
     name                          = "${var.vm_name}-nic-1-ipconfig-1"
     subnet_id                     = azurerm_subnet.wfj-subnet.id
