@@ -66,4 +66,9 @@ resource "azurerm_virtual_machine" "wfj-vm" {
       manager-by = "iac"
     }
   )
+
+  depedeny_on = [
+    azurerm_network_interface.wfj-nic
+  ]
+
 }
