@@ -5,6 +5,11 @@ variable "vm_name" {
   type        = string
 }
 
+variable "vm_password" {
+  description = "Virtual Machine Password"
+  type        = string
+}
+
 variable "location" {
   description = "Azure Region"
   type        = string

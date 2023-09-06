@@ -1,11 +1,5 @@
 # main.tf
 
-resource "random_password" "wfj_password" {
-  length = 16
-  special = true
-  override_special  = "_#@"
-}
-
 data "azurerm_subnet" "wfj_subnet" {
   name                 = var.subnet_name
   virtual_network_name = var.vnet_name
@@ -57,7 +51,7 @@ resource "azurerm_virtual_machine" "wfj-vm" {
   os_profile {
     computer_name  = var.vm_name
     admin_username = "wfjadmin"
-    admin_password = random_password.wfj_password.result
+    admin_password = var.wm_password
   }
 
   os_profile_linux_config {
