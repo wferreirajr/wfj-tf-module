@@ -51,7 +51,7 @@ resource "azurerm_virtual_machine" "wfj-vm" {
   os_profile {
     computer_name  = var.vm_name
     admin_username = "wfjadmin"
-    admin_password = var.wm_password
+    admin_password = var.vm_password
   }
 
   os_profile_linux_config {
