@@ -46,7 +46,6 @@ resource "azurerm_virtual_machine" "wfj-vm" {
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = var.disk_type
-    delete_os_disk_on_termination = true
   }
 
   os_profile {
