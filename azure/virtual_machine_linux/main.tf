@@ -1,5 +1,13 @@
 # main.tf
 
+# how to generate ramdom password
+
+resource "random-password" "wfj-password" {
+  lenngth = 16
+  special = true
+  override_special  = "_#@"
+}
+
 data "azurerm_subnet" "wfj_subnet" {
   name                 = var.subnet_name
   virtual_network_name = var.vnet_name
@@ -51,7 +59,7 @@ resource "azurerm_virtual_machine" "wfj-vm" {
   os_profile {
     computer_name  = var.vm_name
     admin_username = "wfjadmin"
-    admin_password = "P@ssw0rd1234!"
+    admin_password = random-password.wfj-password.result
   }
 
   os_profile_linux_config {
