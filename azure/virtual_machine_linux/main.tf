@@ -1,7 +1,7 @@
 # main.tf
 
 resource "random_password" "wfj-password" {
-  lenngth = 16
+  length = 16
   special = true
   override_special  = "_#@"
 }
