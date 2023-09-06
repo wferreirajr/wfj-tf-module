@@ -1,6 +1,6 @@
 # main.tf
 
-resource "random_password" "wfj-password" {
+resource "random_password" "wfj_password" {
   length = 16
   special = true
   override_special  = "_#@"
@@ -57,7 +57,7 @@ resource "azurerm_virtual_machine" "wfj-vm" {
   os_profile {
     computer_name  = var.vm_name
     admin_username = "wfjadmin"
-    admin_password = random_password.wfj-password.result
+    admin_password = random_password.wfj_password.result
   }
 
   os_profile_linux_config {
